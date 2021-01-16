@@ -1,0 +1,7 @@
+export * from './home/Home'
+export * from './contribua/Contribua'
+export * from './jovem/Jovem'
+export * from './jovem/habilidades/Habilidades'
+export * from './jovem/desafios/Desafios'
+export * from './jovem/beneficios/Beneficios'
+export * from './login/Login'

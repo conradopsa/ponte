@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from "@material-ui/core/styles";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from "react";
+import "./App.scss";
+import { theme } from "./Theme";
+import {
+  Home,
+  Login,
+  Jovem,
+  JovemHabilidades,
+  JovemBeneficios,
+  JovemDesafios,
+} from "./pages";
+import { Contrate } from "./pages/contrate/Contribua";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route path="/login">
+            <Login />
+          </Route>
+
+          <Route exact path="/jovem">
+            <Jovem />
+          </Route>
+
+          <Route path="/jovem/habilidades">
+            <JovemHabilidades />
+          </Route>
+
+          <Route path="/jovem/desafios">
+            <JovemDesafios />
+          </Route>
+
+          <Route path="/jovem/beneficios">
+            <JovemBeneficios />
+          </Route>
+
+          <Route exact path="/contrate">
+            <Contrate />
+          </Route>
+        </Switch>
+      </Router>
+    </ThemeProvider>
   );
 }
-
-export default App;
