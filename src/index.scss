@@ -13,16 +13,24 @@ body {
   --dark-text-color: #fff;
 }
 
-.lightContainer {
+.home-page {
+  .lightContainer,
+  .darkContainer {
+    text-align: center;
+    
+  }
+}
 
+.lightContainer {
   color: var(--light-text-color);
   font-weight: 300;
-
+  
   margin: 0px 40px;
 
-  h1, h2 {
+  h1,
+  h2 {
     color: var(--light-secondary-color);
-    font-weight: 300; 
+    font-weight: 300;
   }
 
   h3 {
@@ -38,6 +46,9 @@ body {
 }
 
 .darkContainer {
+
+  margin: 0px 20px;
+
   color: var(--dark-text-color);
 
   path {

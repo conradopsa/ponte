@@ -6,10 +6,13 @@ interface AppNavbarProperties {
 }
 
 export function AppNavbar({ position, children }: AppNavbarProperties) {
-  sectionStyle.position = position || sectionStyle.position;
-
   return (
-    <section style={sectionStyle}>
+    <section
+      style={{
+        ...sectionStyle,
+        position: position || sectionStyle.position,
+      }}
+    >
       <div style={divStyle}>{children}</div>
     </section>
   );
@@ -18,7 +21,10 @@ export function AppNavbar({ position, children }: AppNavbarProperties) {
 const sectionStyle: CSSProperties = {
   backgroundColor: "rgb(0, 0, 0, 0.15)",
   position: "fixed",
+  top: 0,
+  right: 0,
   width: "100%",
+  zIndex: 100
 };
 
 const divStyle: CSSProperties = {
