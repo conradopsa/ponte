@@ -21,5 +21,6 @@ const sectionStyle: CSSProperties = {
 };
 
 const imgStyle: CSSProperties = {
-  width: "auto",
+  width: "100vw",
+  objectFit: "cover"
 };
