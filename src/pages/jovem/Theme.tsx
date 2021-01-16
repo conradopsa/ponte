@@ -12,21 +12,19 @@ export const theme = createMuiTheme({
   typography: {
     h6: {
       fontSize: '12px',
-      fontFamily: 'Open Sans, sans-serif'
     },
     body1: {
-      fontSize: '18px',
-      fontFamily: 'Quicksand, sans-serif'
+      fontSize: '18px'
     },
     body2: {
-      fontSize: '12px',
-      fontFamily: 'Quicksand, sans-serif'
+      fontSize: '13px'
     },
     subtitle2: {
-      fontFamily: 'Open Sans, sans-serif'
+      fontFamily: 'Quicksand, sans-serif'
     },
     h5: {
-      fontSize: '13px'
+      fontSize: '14px',
+      fontFamily: 'Open sans, sans-serif'
     }
   }
 });
