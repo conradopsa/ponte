@@ -51,7 +51,7 @@ const ROUTES: RouteProps[] = [
     component: Contrate
   },
   {
-    path: '/contribue',
+    path: '/contribua',
     component: Contribua
   },
   {
@@ -61,7 +61,7 @@ const ROUTES: RouteProps[] = [
   },
   {
     path: '*',
-    component: () => <Redirect to="/home" />
+    component: () => <Redirect to="/" />
   }
 ];
 
