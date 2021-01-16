@@ -1,7 +1,6 @@
 import { ThemeProvider } from "@material-ui/core/styles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
-import "./App.scss";
 import { theme } from "./Theme";
 import {
   Home,
@@ -10,8 +9,9 @@ import {
   JovemHabilidades,
   JovemBeneficios,
   JovemDesafios,
+  Contribua,
 } from "./pages";
-import { Contrate } from "./pages/contrate/Contribua";
+import { Contrate } from "./pages/contrate/Contrate";
 
 export default function App() {
   return (
@@ -44,6 +44,10 @@ export default function App() {
 
           <Route exact path="/contrate">
             <Contrate />
+          </Route>
+
+          <Route exact path="/contribua">
+            <Contribua />
           </Route>
         </Switch>
       </Router>
