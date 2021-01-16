@@ -5,9 +5,6 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
-  icon: {
-    color: '#6C6AE2'
-  },
   drawerContent: {
     width: '240px'  
   },
@@ -81,9 +78,7 @@ function TopBar() {
       <AppBar 
         position="static"
         elevation={0}
-        style={{
-          backgroundColor: 'white'
-        }}
+        color="secondary"
       >
         <Toolbar>
           <Grid 
@@ -91,13 +86,13 @@ function TopBar() {
             justify="space-between"
           >
             <Grid item>
-              <IconButton edge="start" aria-label="menu" onClick={() => setOpen(true)} className={classes.icon}>
+              <IconButton edge="start" aria-label="menu" onClick={() => setOpen(true)} color="primary">
                 <MenuIcon color="inherit" />
               </IconButton>
             </Grid>
 
             <Grid item>
-              <IconButton edge="start" aria-label="notifications" className={classes.icon}>
+              <IconButton edge="start" aria-label="notifications" color="primary">
                 <NotificationsIcon color="inherit" />
               </IconButton>
             </Grid>
