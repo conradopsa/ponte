@@ -9,7 +9,7 @@ import BottomBar from '../../components/BottomBar';
 const useStyles = makeStyles({
   backgroundImage: {
     display: 'inline-block',
-    width: '100vw',
+    width: '100%',
     height: '100vh',
     backgroundImage: "url('/title-background.png')",
     backgroundSize: '100% 53vh',
@@ -32,11 +32,11 @@ export function Jovem({ routes }: any) {
             ))}
           </Switch>
         </Container>
-
-        <Box mt={10}>
-          <BottomBar />
-        </Box>
       </div>
+
+      <Box mt={2}>
+        <BottomBar />
+      </Box>
     </ThemeProvider>
   );
 }
