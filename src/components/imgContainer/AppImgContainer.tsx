@@ -1,14 +1,31 @@
 import { CSSProperties } from "react";
 
-
-
 /**
  * This image container show image and crop without modify your aspect ratio
  */
-export function AppImgContainer({ backgroundTitle, height }: any) {
+export function AppImgContainer({
+  backgroundTitle,
+  height,
+  heightContainer,
+  alignItems,
+  width
+}: any) {
   return (
-    <section style={sectionStyle}>
-      <img style={{...imgStyle, height: height || imgStyle.height}} src={backgroundTitle} />
+    <section
+      style={{
+        ...sectionStyle,
+        alignItems: alignItems || sectionStyle.alignItems,
+        height: heightContainer || sectionStyle.height,
+      }}
+    >
+      <img
+        style={{
+          ...imgStyle,
+          height: height || imgStyle.height,
+          width: width || sectionStyle.width,
+        }}
+        src={backgroundTitle}
+      />
     </section>
   );
 }
