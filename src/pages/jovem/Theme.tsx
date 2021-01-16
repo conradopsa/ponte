@@ -7,6 +7,16 @@ export const theme = createMuiTheme({
     },
     secondary: {
       main: "#FFF",
-    },
+    }
   },
+  typography: {
+    h6: {
+      fontSize: '12px',
+      fontFamily: 'Open Sans, sans-serif'
+    },
+    body2: {
+      fontSize: '18px',
+      fontFamily: 'Quicksand, sans-serif'
+    }
+  }
 });
