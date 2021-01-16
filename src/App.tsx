@@ -1,54 +1,78 @@
-import { ThemeProvider } from "@material-ui/core/styles";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React from "react";
+import { BrowserRouter as Router, Switch, RouteProps, Redirect } from "react-router-dom";
+import { ThemeProvider } from "@material-ui/core/styles";
 import { theme } from "./Theme";
 import {
   Home,
   Login,
   Jovem,
-  JovemHabilidades,
-  JovemBeneficios,
-  JovemDesafios,
   Contribua,
+  JovemHome,
+  JovemHabilidades,
+  JovemDesafios,
+  JovemBeneficios,
 } from "./pages";
 import { Contrate } from "./pages/contrate/Contrate";
+import RouteWithSubRoutes from "./components/RouteWithSubRoutes";
+
+const ROUTES: RouteProps[] = [
+  {
+    path: '/jovem',
+    component: Jovem,
+    children: [
+      {
+        path: '/jovem/home',
+        component: JovemHome
+      },
+      {
+        path: '/jovem/habilidades',
+        component: JovemHabilidades
+      },
+      {
+        path: '/jovem/desafios',
+        component: JovemDesafios
+      },
+      {
+        path: '/jovem/beneficios',
+        component: JovemBeneficios
+      },
+      {
+        path: '*',
+        component: () => <Redirect to="/jovem/home" />
+      }
+    ]
+  },
+  {
+    path: "/login",
+    component: Login
+  },
+  {
+    path: '/contrate',
+    component: Contrate
+  },
+  {
+    path: '/contribue',
+    component: Contribua
+  },
+  {
+    path: "/",
+    exact: true,
+    component: Home
+  },
+  {
+    path: '*',
+    component: () => <Redirect to="/home" />
+  }
+];
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-
-          <Route path="/login">
-            <Login />
-          </Route>
-
-          <Route exact path="/jovem">
-            <Jovem />
-          </Route>
-
-          <Route path="/jovem/habilidades">
-            <JovemHabilidades />
-          </Route>
-
-          <Route path="/jovem/desafios">
-            <JovemDesafios />
-          </Route>
-
-          <Route path="/jovem/beneficios">
-            <JovemBeneficios />
-          </Route>
-
-          <Route exact path="/contrate">
-            <Contrate />
-          </Route>
-
-          <Route exact path="/contribua">
-            <Contribua />
-          </Route>
+          { ROUTES.map((route, i) => (
+            <RouteWithSubRoutes key={i} {...route} />
+          ))}
         </Switch>
       </Router>
     </ThemeProvider>
