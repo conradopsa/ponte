@@ -21,6 +21,12 @@ export const theme = createMuiTheme({
     body2: {
       fontSize: '12px',
       fontFamily: 'Quicksand, sans-serif'
+    },
+    subtitle2: {
+      fontFamily: 'Open Sans, sans-serif'
+    },
+    h5: {
+      fontSize: '13px'
     }
   }
 });
