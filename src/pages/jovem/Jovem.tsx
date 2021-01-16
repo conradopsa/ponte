@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, makeStyles } from "@material-ui/core";
 import { Switch } from "react-router-dom";
 import RouteWithSubRoutes from "../../components/RouteWithSubRoutes";
+import TopBar from '../../components/Topbar';
 
 const useStyles = makeStyles({
   backgroundImage: {
@@ -19,6 +20,8 @@ export function Jovem({ routes }: any) {
 
   return (
     <div className={classes.backgroundImage}>
+      <TopBar />
+
       <Container maxWidth="sm">
         <Switch>
           { routes.map((route: any, i: number) => (
