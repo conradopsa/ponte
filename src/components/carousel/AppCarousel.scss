@@ -1,10 +1,28 @@
-section .carousel-item {
-    .background {
-        position: absolute;
-        z-index: -1;
-    }
+.carousel {
+  overflow: hidden;
+}
 
-    main {
-        
-    }
+.carousel-slide {
+  //overflow: hidden;
+  transform: translate3d(0%, 0px, 0px);
+  //transition-duration: 350ms;
+  display: flex;
+}
+
+.carousel-item {
+
+  min-width: 100%;
+
+
+  .background {
+
+    overflow: hidden;
+  }
+
+  main {
+    position: fixed;
+    min-width: 100%;
+    top: 0;
+  }
+
 }
