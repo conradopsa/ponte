@@ -8,7 +8,8 @@ export function AppImgContainer({
   height,
   heightContainer,
   alignItems,
-  width
+  width,
+  style
 }: any) {
   return (
     <section
@@ -22,7 +23,7 @@ export function AppImgContainer({
         style={{
           ...imgStyle,
           height: height || imgStyle.height,
-          width: width || sectionStyle.width,
+          ...style
         }}
         src={backgroundTitle}
       />
@@ -38,6 +39,6 @@ const sectionStyle: CSSProperties = {
 };
 
 const imgStyle: CSSProperties = {
-  width: "100vw",
+  width: "100%",
   objectFit: "cover"
 };
