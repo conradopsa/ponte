@@ -14,8 +14,12 @@ export const theme = createMuiTheme({
       fontSize: '12px',
       fontFamily: 'Open Sans, sans-serif'
     },
-    body2: {
+    body1: {
       fontSize: '18px',
+      fontFamily: 'Quicksand, sans-serif'
+    },
+    body2: {
+      fontSize: '12px',
       fontFamily: 'Quicksand, sans-serif'
     }
   }

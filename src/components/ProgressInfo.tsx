@@ -27,7 +27,7 @@ export function ProgressInfo(props: any) {
         spacing={1}
       >
         <Grid item>
-          <Typography variant="body2" color="secondary" >{ props.name }</Typography>
+          <Typography variant="body1" color="secondary">{ props.name }</Typography>
         </Grid>
       
         <Grid item>
