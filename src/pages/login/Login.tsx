@@ -41,7 +41,7 @@ export function Login() {
   return (
     <ThemeProvider theme={theme}>
       <div className={classes.backgroundImage}>
-        <Box display="flex" justifyContent="center">
+        <Box display="flex" justifyContent="center" my={2}>
           <img src="/logo.svg" alt="Logo" width="100px" />
         </Box>
 
@@ -53,7 +53,7 @@ export function Login() {
           <img src="/undraw.svg" width="300px" alt="Illustration" />
         </Box>
 
-        <Container maxWidth="sm">
+        <Container maxWidth="sm" style={{marginTop: '30px'}}>
           <Grid 
             container
             direction="column"
@@ -85,7 +85,7 @@ export function Login() {
         </Container>
 
         <Box width="100%" position="fixed" bottom={5} mx="auto">
-          <Typography variant="body2" align="center" style={{color: '#363092', fontFamily: 'Open sans, sans-serif', fontWeight: 'bold'}}>Ponte © 2021</Typography>
+          <Typography variant="body2" align="center" style={{color: '#363092', fontFamily: 'Open sans, sans-serif', fontWeight: 'bold'}}>© Ponte, 2021</Typography>
         </Box>
       </div>
     </ThemeProvider>
