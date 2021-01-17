@@ -39,6 +39,6 @@ const sectionStyle: CSSProperties = {
 };
 
 const imgStyle: CSSProperties = {
-  width: "100%",
+  minWidth: "100%",
   objectFit: "cover"
 };
