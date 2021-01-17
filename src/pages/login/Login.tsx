@@ -85,7 +85,7 @@ export function Login() {
         </Container>
 
         <Box width="100%" position="fixed" bottom={5} mx="auto">
-          <Typography variant="body2" align="center" style={{color: '#363092', fontFamily: 'Open sans, sans-serif', fontWeight: 'bold'}}>Encaminhar © 2021</Typography>
+          <Typography variant="body2" align="center" style={{color: '#363092', fontFamily: 'Open sans, sans-serif', fontWeight: 'bold'}}>Ponte © 2021</Typography>
         </Box>
       </div>
     </ThemeProvider>
