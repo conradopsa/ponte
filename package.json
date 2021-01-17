@@ -27,6 +27,7 @@
     "yarn": "^1.22.10"
   },
   "scripts": {
+    "dev": "react-scripts start",
     "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
