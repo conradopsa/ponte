@@ -42,7 +42,7 @@ export function Login() {
     <ThemeProvider theme={theme}>
       <div className={classes.backgroundImage}>
         <Box display="flex" justifyContent="center">
-          <img src="/logo.png" alt="Logo" width="100px" />
+          <img src="/logo.svg" alt="Logo" width="100px" />
         </Box>
 
         <Typography variant="subtitle1" align="center" color="secondary">Não precisa saber, só caí dentro</Typography>
