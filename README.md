@@ -1,6 +1,6 @@
 # Equipe 262 - 🌉 Ponte / Hackathon CCR 2021
 
-Projeto feito com carinho para o Hackhaton da CCR 💜
+Projeto feito com carinho para o Hackathon da CCR 💜
 
 # 🤝 Nossa equipe 
 
